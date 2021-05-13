@@ -1,0 +1,35 @@
+{
+  "name": "what-matters-most-app",
+  "version": "1.0.0",
+  "description": "A decision making app to help you understand what matters most",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start-react": "webpack --mode=development --watch",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimSoko/what-matters-most-app.git"
+  },
+  "author": "Kim Soko Schaefer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KimSoko/what-matters-most-app/issues"
+  },
+  "homepage": "https://github.com/KimSoko/what-matters-most-app#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.37.0"
+  }
+}
