@@ -1,0 +1,25 @@
+body {
+  background-color: #E3EADC;
+}
+
+.app {
+  width: 600px;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 54px;
+  color: #6377E1;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #E15400
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  color: #2B2F33;
+}
