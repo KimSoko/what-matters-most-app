@@ -2,7 +2,7 @@
   "name": "what-matters-most-app",
   "version": "1.0.0",
   "description": "A decision making app to help you understand what matters most",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
     "start-react": "webpack --mode=development --watch",
