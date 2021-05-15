@@ -1,8 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.jsx';
+import Start from './Start.jsx';
+import Decide from './Decide.jsx';
+import Results from './Results.jsx';
+
+const Index = () => {
+  return (
+    <div id="index-div">
+      <Start />
+      <Decide />
+      <Results />
+    </div>
+  )
+};
 
 ReactDOM.render(
-  <div><App /></div>,
+  <Index />,
   document.getElementById('app')
 );

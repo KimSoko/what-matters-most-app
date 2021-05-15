@@ -7,8 +7,8 @@ yarn-error.log*
 lerna-debug.log*
 
 # Bundle
-ignoredBundle.js
-ignoredBundle.js.LICENSE.txt
+bundle.js
+bundle.js.LICENSE.txt
 main.js
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
