@@ -10,13 +10,13 @@ const Start = () => {
 
         <h1 className="header-title">WHAT MATTERS MOST</h1>
         <div className="header-text-div">
-          <p className="prioritize-header">USE IT FOR...</p>
+          {/* <p className="prioritize-header">USE IT FOR...</p>
           <ul className="header-text">
             <li>Choosing a home</li>
             <li>Choosing a job</li>
             <li>Choosing a partner</li>
             <li>Prioritizing your life</li>
-          </ul>
+          </ul> */}
         </div>
         <h2 className="header-sub">A decision making app</h2>
       </div>
