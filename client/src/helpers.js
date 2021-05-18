@@ -46,6 +46,22 @@ const randomizeOptions = (options) => {
   return randomized;
 };
 
+const determineFirst = (randomized) => {
+  let final = [];
+  for (let i = 0; i < randomized.length; i++) {
+    let combo = randomized[i];
+    let coinFlip = Math.round(Math.random());
+    if (coinFlip === 0) {
+      final.push(combo);
+    } else {
+      let first = combo[1];
+      let second = combo[0];
+      final.push([first, second]);
+    }
+  }
+  return final;
+}
+
 const createOptions = (criteria) => {
   let options = [];
   let first = 0;
@@ -60,8 +76,9 @@ const createOptions = (criteria) => {
       second = first + 1;
     }
   }
-  randomizeOptions(options);
-  return options;
+  let randomized = randomizeOptions(options);
+  let final = determineFirst(randomized);
+  return final;
 };
 
 module.exports = { emptyCriteria, createOptions }
