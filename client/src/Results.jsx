@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import List from './List.jsx';
 
-const Results = () => {
+const Results = ({ criteria, topic }) => {
   const [email, setEmail] = useState('');
 
   const handleClick = (e) => {
@@ -34,7 +34,8 @@ const Results = () => {
       </div>
 
       <div className="body" id="results-body">
-        <List />
+        <List criteria={criteria}
+              topic={topic} />
       </div>
     </div>
   )

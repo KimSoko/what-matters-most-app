@@ -2,37 +2,44 @@ const emptyCriteria = [
   {
     name: '1',
     value: '',
-    score: 0
+    score: 0,
+    display: 'A'
   },
   {
     name: '2',
     value: '',
-    score: 0
+    score: 0,
+    display: 'A'
   },
   {
     name: '3',
     value: '',
-    score: 0
+    score: 0,
+    display: 'B'
   },
   {
     name: '4',
     value: '',
-    score: 0
+    score: 0,
+    display: 'B'
   },
   {
     name: '5',
     value: '',
-    score: 0
+    score: 0,
+    display: 'C'
   },
   {
     name: '6',
     value: '',
-    score: 0
+    score: 0,
+    display: 'C'
   },
   {
     name: '7',
     value: '',
-    score: 0
+    score: 0,
+    display: 'A'
   },
 ];
 
@@ -83,7 +90,6 @@ const createOptions = (criteria) => {
   }
   let randomized = randomizeOptions(options);
   let final = determineFirst(randomized);
-  console.log('This is final from helpers ', final);
   return final;
 };
 

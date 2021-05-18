@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-const Form = ({ handleCriteria, handleSubmit }) => {
-  const [topic, setTopic] = useState('');
-
+const Form = ({ handleCriteria, handleSubmit, handleTopic}) => {
   const handleClick = (e) => {
     e.target.value = '';
   }
-
-  const handleTopic = (e) => {
-    setTopic(e.target.value);
-  };
 
   return (
     <form id="start-form">
