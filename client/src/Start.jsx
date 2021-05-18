@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Form from './Form.jsx';
 
-const Start = ({ handleCriteria }) => {
+const Start = ({ handleCriteria, handleSubmit }) => {
   return (
     <div id="start-div">
       <div className="space" />
@@ -13,7 +13,8 @@ const Start = ({ handleCriteria }) => {
       </div>
 
       <div className="body" id="start-body">
-        <Form handleCriteria={handleCriteria} />
+        <Form handleCriteria={handleCriteria}
+              handleSubmit={handleSubmit} />
       </div>
     </div>
   )

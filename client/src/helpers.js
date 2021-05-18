@@ -67,9 +67,14 @@ const createOptions = (criteria) => {
   let first = 0;
   let second = 1;
 
-  while (first < criteria.length - 1) {
-    options.push([criteria[first], criteria[second]]);
-    if (second < criteria.length - 1) {
+  let filtered = criteria.filter(obj => obj.value !== '');
+
+  while (first < filtered.length - 1) {
+    if (filtered[second].value === '') {
+      break;
+    }
+    options.push([filtered[first], filtered[second]]);
+    if (second < filtered.length - 1) {
       second++;
     } else {
       first++;

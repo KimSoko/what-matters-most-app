@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-const Form = ({ handleCriteria }) => {
+const Form = ({ handleCriteria, handleSubmit }) => {
   const [topic, setTopic] = useState('');
 
   const handleClick = (e) => {
@@ -11,10 +11,6 @@ const Form = ({ handleCriteria }) => {
   const handleTopic = (e) => {
     setTopic(e.target.value);
   };
-
-  const handleSubmit = (e) => {
-
-  }
 
   return (
     <form id="start-form">
