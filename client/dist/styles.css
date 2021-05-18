@@ -236,4 +236,44 @@ input:focus {
   grid-column-start: 2;
   grid-column-end: 3;
   margin-top: 30px;
+  color: #E3EADC;
+}
+
+/**************** DECIDE ***************/
+
+.option-button {
+  height: 350px;
+  width: 350px;
+  margin: 0;
+  font-size: 16px;
+}
+
+#option-A {
+  background-color: #FFE8FE;
+  color: #E15400;
+}
+
+#option-B {
+  background-color: #6377E1;
+  color: #EBFF00;
+}
+
+#option-C {
+  background-color: #EBFF00;
+  color: #6377E1;
+}
+
+#option-D {
+  background-color:#FFE8FE;
+  color: #E15400;
+}
+
+#option-E {
+  background-color: #6377E1;
+  color: #FFE8FE;
+}
+
+#option-F {
+  background-color: #EBFF00;
+  color: #E15400;
 }
