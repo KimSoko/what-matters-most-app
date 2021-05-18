@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-const Form = () => {
+const Form = ({ handleCriteria }) => {
   const [topic, setTopic] = useState('');
-  const [criteria, setCriteria] = useState({ 1: '', 2: '', 3: '', 4: '', 5: '', 6: '', 7: '' });
 
   const handleClick = (e) => {
     e.target.value = '';
@@ -11,14 +10,6 @@ const Form = () => {
 
   const handleTopic = (e) => {
     setTopic(e.target.value);
-  };
-
-  const handleCriteria = (e) => {
-    let oldCriteria = criteria;
-    let index = Number(e.target.name);
-    oldCriteria[index] = e.target.value;
-    console.log(oldCriteria);
-    setCriteria(oldCriteria);
   };
 
   const handleSubmit = (e) => {

@@ -260,12 +260,12 @@ input:focus {
 
 #option-C {
   background-color: #EBFF00;
-  color: #6377E1;
+  color: #E15400;
 }
 
 #option-D {
   background-color:#FFE8FE;
-  color: #E15400;
+  color: #6377E1;
 }
 
 #option-E {
@@ -275,5 +275,55 @@ input:focus {
 
 #option-F {
   background-color: #EBFF00;
-  color: #E15400;
+  color: #6377e1;
+}
+
+/**************** RESULTS ***************/
+
+#results-header {
+  display: grid;
+  grid-template-areas: 'logo text'
+                       'logo input'
+                       'sub  button';
+  grid-template-rows: auto auto 30px;
+  grid-template-columns: 250px auto;
+}
+
+#results-logo {
+  grid-area: logo;
+  height: 100px;
+}
+
+#results-sub {
+  grid-area: sub;
+  height: 30px;
+}
+
+#email-text {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 10px;
+  color: #E3EADC;
+  grid-area: text;
+  width: 125px;
+  float: right;
+}
+
+#email-input {
+  grid-area: input;
+  height: 10px;
+  background-color: #6377E1;
+  color: #E3EADC;
+  width: 140px;
+  float: right;
+}
+
+#email-button {
+  grid-area: button;
+  border-top: 2px solid #E3EADC;
+  height: 10px;
+  padding: 0px;
+  margin: 0px;
+  float: right;
+  padding-right: 10px;
+  width: 140px;
 }
