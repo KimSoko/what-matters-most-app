@@ -11,19 +11,19 @@ const Index = () => {
 
   const handleCriteria = (e) => {
     let oldCriteria = criteria;
-    console.log('Criteria before ', oldCriteria);
     let num = (e.target.name);
-    console.log('This is num ', num)
     for (let i = 0; i < oldCriteria.length; i++) {
       if (oldCriteria[i].name === num) {
-        console.log('This is the right obj ', oldCriteria[i]);
         oldCriteria[i].value = e.target.value;
       }
-
     }
-    console.log('Criteria after ', oldCriteria);
     setCriteria(oldCriteria);
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setOptions(createOptions(criteria));
+  }
 
   return (
     <div id="index-div">

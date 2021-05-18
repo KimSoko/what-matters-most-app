@@ -36,4 +36,22 @@ const emptyCriteria = [
   },
 ];
 
-module.exports = { emptyCriteria }
+var createOptions = (criteria) => {
+  let options = [];
+  let first = 0;
+  let second = 1;
+
+  while (first < criteria.length - 1) {
+    options.push([criteria[first], criteria[second]]);
+    if (second < criteria.length - 1) {
+      second++;
+    } else {
+      first++;
+      second = first + 1;
+    }
+  }
+
+  return options;
+};
+
+module.exports = { emptyCriteria, createOptions }
