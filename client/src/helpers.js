@@ -36,7 +36,17 @@ const emptyCriteria = [
   },
 ];
 
-var createOptions = (criteria) => {
+const randomizeOptions = (options) => {
+  let randomized = [];
+  while (options.length) {
+    let randomIndex = Math.floor(Math.random() * options.length);
+    randomized.push(options[randomIndex]);
+    options.splice(randomIndex, 1);
+  }
+  return randomized;
+};
+
+const createOptions = (criteria) => {
   let options = [];
   let first = 0;
   let second = 1;
@@ -50,7 +60,7 @@ var createOptions = (criteria) => {
       second = first + 1;
     }
   }
-
+  randomizeOptions(options);
   return options;
 };
 
