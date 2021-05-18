@@ -83,6 +83,7 @@ const createOptions = (criteria) => {
   }
   let randomized = randomizeOptions(options);
   let final = determineFirst(randomized);
+  console.log('This is final from helpers ', final);
   return final;
 };
 
