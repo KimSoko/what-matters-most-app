@@ -8,9 +8,11 @@ const List = ({ criteria, topic }) => {
 
   return (
     <div>
-      <h1 id="most">{most.value}</h1>
-      <h2 className="results-h2" id="results-sub">is what matters most to you when it comes to {topic}</h2>
-      <h2 className="results-h2" id="most-score">TOTAL SCORE: {most.score}</h2>
+      <div id="most-div">
+        <h1 id="most">{most.value}</h1>
+        <h2 className="results-h2" id="results-sub">is what matters most to you when it comes to {topic}</h2>
+        <h2 className="results-h2" id="most-score">TOTAL SCORE: {most.score}</h2>
+      </div>
       <div className="results-div" id="more-div">
         <h2 className="results-h2" id="results-more">The rest of your results include:</h2>
         <ul id="more-list">

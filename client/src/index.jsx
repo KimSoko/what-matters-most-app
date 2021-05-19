@@ -57,11 +57,19 @@ const Index = () => {
     setOptions(oldOptions);
     if (oldOptions.length === 0) {
       setDisplay('results');
-      console.log('criteria ', criteria);
     }
-
   }
 
+  const handlePost = (e) => {
+    let data = helpers.format(criteria);
+    axios.post('/db', data)
+    .then((response) => {
+      console.log('POST to db successful ', response);
+    })
+    .catch((err) => {
+      throw err;
+    })
+  }
 
   return (
     <div id="index-div">
@@ -78,7 +86,8 @@ const Index = () => {
       )}
       {display === 'results' && (
         <Results criteria={criteria}
-                 topic={topic} />
+                 topic={topic}
+                 handlePost={handlePost}/>
       )}
     </div>
   )

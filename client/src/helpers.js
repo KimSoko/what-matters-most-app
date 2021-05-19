@@ -93,4 +93,24 @@ const createOptions = (criteria) => {
   return final;
 };
 
-module.exports = { emptyCriteria, createOptions }
+const formatForDB = (data) => {
+  return data = {
+          topic: data.topic,
+          '1_name': data['1_name'] || null,
+          '1_score': data['1_score'] || null,
+          '2_name': data['2_name'] || null,
+          '2_score': data['2_score'] || null,
+          '3_name': data['3_name'] || null,
+          '3_score': data['3_score'] || null,
+          '4_name': data['4_name'] || null,
+          '4_score': data['4_score'] || null,
+          '5_name': data['5_name'] || null,
+          '5_score': data['5_score'] || null,
+          '6_name': data['6_name'] || null,
+          '6_score': data['6_score'] || null,
+          '7_name': data['7_name'] || null,
+          '7_score': data['7_score'] || null
+  }
+};
+
+module.exports = { emptyCriteria, createOptions, formatForDB }
