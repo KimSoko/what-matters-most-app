@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 import Start from './Start.jsx';
 import Decide from './Decide.jsx';
 import Results from './Results.jsx';
@@ -61,8 +62,9 @@ const Index = () => {
   }
 
   const handlePost = (e) => {
-    let data = helpers.format(criteria);
-    axios.post('/db', data)
+    let data = helpers.formatForDB(criteria);
+    data.topic = topic;
+    axios.post('/data', data)
     .then((response) => {
       console.log('POST to db successful ', response);
     })

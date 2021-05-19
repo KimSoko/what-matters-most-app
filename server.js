@@ -14,10 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, './client/dist')));
 app.use(cors());
 
-app.post('/data')
+app.post('/data', postData)
 
 if (process.env.NODE_ENV !== 'test') {
   app.listen(port, () => {
-    console.log('WMM is listening on port 3003');
+    console.log('WMM server is listening on port 3003');
   });
 }

@@ -93,24 +93,25 @@ const createOptions = (criteria) => {
   return final;
 };
 
-const formatForDB = (data) => {
-  return data = {
-          topic: data.topic,
-          '1_name': data['1_name'] || null,
-          '1_score': data['1_score'] || null,
-          '2_name': data['2_name'] || null,
-          '2_score': data['2_score'] || null,
-          '3_name': data['3_name'] || null,
-          '3_score': data['3_score'] || null,
-          '4_name': data['4_name'] || null,
-          '4_score': data['4_score'] || null,
-          '5_name': data['5_name'] || null,
-          '5_score': data['5_score'] || null,
-          '6_name': data['6_name'] || null,
-          '6_score': data['6_score'] || null,
-          '7_name': data['7_name'] || null,
-          '7_score': data['7_score'] || null
-  }
+const formatForDB = (criteria) => {
+  let data = { topic: ''};
+
+  data['1_name'] = criteria[0].name || null;
+  data['1_score'] = criteria[0].score || null;
+  data['2_name'] = criteria[1].name || null;
+  data['2_score'] = criteria[1].score || null;
+  data['3_name'] = criteria[2].name || null;
+  data['3_score'] = criteria[2].score || null;
+  data['4_name'] = criteria[3].name || null;
+  data['4_score'] = criteria[3].score || null;
+  data['5_name'] = criteria[4].name || null;
+  data['5_score'] = criteria[4].score || null;
+  data['6_name'] = criteria[5].name || null;
+  data['6_score'] = criteria[5].score || null;
+  data['7_name'] = criteria[6].name || null;
+  data['7_score'] = criteria[6].score || null;
+
+  return data;
 };
 
 module.exports = { emptyCriteria, createOptions, formatForDB }
