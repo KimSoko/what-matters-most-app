@@ -25,7 +25,7 @@ const addContact = async (req, res) => {
 
   try {
     let mcResponse = await axios.post('https://us2.api.mailchimp.com/3.0/lists/7caa13b333/members', postData, axiosConfig)
-    console.log("Mailchimp List Response: ", mcResponse);
+    console.log("Mailchimp List Response: ", mcResponse.status, mcResponse.data);
     res.send('Mailchimp has been updated');
 
   } catch (err) {

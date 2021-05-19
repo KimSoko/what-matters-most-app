@@ -14,11 +14,28 @@ const List = ({ criteria, topic }) => {
         <h2 className="results-h2" id="most-score">TOTAL SCORE: {most.score}</h2>
       </div>
       <div className="results-div" id="more-div">
-        <h2 className="results-h2" id="results-more">YOUR COMPLETE RESULTS</h2>
+        {/* <h2 className="results-h2" id="results-more">COMPLETE RESULTS</h2> */}
         <div id="table-div">
-          <h2 className="table-header" id="table-rank">Rank</h2>
-          <h2 className="table-header" id="table-name">Criteria</h2>
-          <h2 className="table-header" id="table-score">Score</h2>
+          <table>
+            <thead>
+              <tr>
+                <th className="table-header" id="header-rank">RANK</th>
+                <th className="table-header" id="header-name">CRITERIA</th>
+                <th className="table-header" id="header-score">SCORE</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sorted.map((item) => {
+                return (
+                  <tr key={`${item.name}-${item.score}`}>
+                    <td className="table-row" id="row-score">{sorted.indexOf(item) + 1}</td>
+                    <td className="table-row" id="row-name">{item.value}</td>
+                    <td className="table-row" id="row-score">{item.score}</td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

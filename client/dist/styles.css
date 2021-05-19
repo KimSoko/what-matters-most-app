@@ -349,11 +349,14 @@ input:focus {
 }
 
 #results-more {
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 50px;
+  letter-spacing: 1.5px;
 }
 
 #most-score {
   font-weight: normal;
+  font-size: 12px;
   margin: 0;
   padding: 0;
 }
@@ -363,19 +366,40 @@ input:focus {
 }
 
 #table-div {
-  grid-template-areas: 'rank   name   score',
-                       '1-rank 1-name 1-score',
-                       '2-rank 2-name 2-score',
-                       '3-rank 3-name 3-score',
-                       '4-rank 4-name 4-score',
-                       '5-rank 5-name 5-score',
-                       '6-rank 6-name 6-score',
-                       '7-rank 7-name 7-score';
+ width: 390px;
+ margin-top: 50px;
+ margin-left: 50px;
+ margin-right: 50px;
+ margin-bottom: 30px;
 }
 
 .table-header {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 50px;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #6377E1;
+  color: #6377E1;
+  text-align: center;
+}
+
+#header-rank {
+  width: 50px;
+}
+
+#header-name {
+  width: 180px;
+}
+
+#header-score {
+  width: 50px;
+}
+
+.table-row {
   font-family:'Courier New', Courier, monospace;
-  background-color:#FFE8FE;
+  font-size: 12px;
+  color:#6377E1;
+  padding: 10px;
+  text-align: center;
 }
 
 #footer-div {
