@@ -3,6 +3,7 @@ const cors = require('cors');
 const path = require('path');
 const app = express();
 const postData = require('./db/query.js');
+const addContact = require('./client/src/mailchimp.js');
 
 let port = process.env.PORT;
 if (port == null || port == "") {
@@ -15,6 +16,8 @@ app.use(express.static(path.join(__dirname, './client/dist')));
 app.use(cors());
 
 app.post('/data', postData)
+
+app.post('/mailchimp', addContact)
 
 if (process.env.NODE_ENV !== 'test') {
   app.listen(port, () => {

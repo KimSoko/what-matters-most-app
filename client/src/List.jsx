@@ -14,14 +14,12 @@ const List = ({ criteria, topic }) => {
         <h2 className="results-h2" id="most-score">TOTAL SCORE: {most.score}</h2>
       </div>
       <div className="results-div" id="more-div">
-        <h2 className="results-h2" id="results-more">The rest of your results include:</h2>
-        <ul id="more-list">
-          {rest.map((item) => {
-            return (
-              <li key={`${item.name}-${item.score}`}>{item.value}:  {item.score}</li>
-            )
-          })}
-        </ul>
+        <h2 className="results-h2" id="results-more">YOUR COMPLETE RESULTS</h2>
+        <div id="table-div">
+          <h2 className="table-header" id="table-rank">Rank</h2>
+          <h2 className="table-header" id="table-name">Criteria</h2>
+          <h2 className="table-header" id="table-score">Score</h2>
+        </div>
       </div>
     </div>
   )

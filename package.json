@@ -20,8 +20,10 @@
   "homepage": "https://github.com/KimSoko/what-matters-most-app#readme",
   "dependencies": {
     "@babel/core": "^7.14.2",
+    "@mailchimp/mailchimp_marketing": "^3.0.42",
     "axios": "^0.21.1",
     "babel-loader": "^8.2.2",
+    "babel-preset-es2015": "^6.24.1",
     "cors": "^2.8.5",
     "eslint-webpack-plugin": "^2.5.4",
     "express": "^4.17.1",

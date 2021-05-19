@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import List from './List.jsx';
 import axios from 'axios';
+import List from './List.jsx';
+import addContact from './mailchimp.js';
 
 const Results = ({ criteria, topic, handlePost }) => {
   const [email, setEmail] = useState('');
@@ -15,9 +16,13 @@ const Results = ({ criteria, topic, handlePost }) => {
    setEmail(newEmail);
   };
 
-  const handleEmail = (e) => {
-    axios.post('/mailChimpAPI', {
-      email: email,
+  const handleEmail = () => {
+    axios.post('/mailchimp', {email: email})
+    .then((response) => {
+      console.log('From handleEmail ', response);
+    })
+    .catch((err) => {
+      console.log('From handleEmail ', err);
     })
   };
 

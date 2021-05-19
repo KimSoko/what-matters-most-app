@@ -348,15 +348,34 @@ input:focus {
   margin-bottom: 20px;
 }
 
+#results-more {
+  font-family: Arial, Helvetica, sans-serif
+}
+
 #most-score {
   font-weight: normal;
   margin: 0;
   padding: 0;
-  background-color: #FFE8FE
 }
 
 #more-div {
   margin-top: 20px;
+}
+
+#table-div {
+  grid-template-areas: 'rank   name   score',
+                       '1-rank 1-name 1-score',
+                       '2-rank 2-name 2-score',
+                       '3-rank 3-name 3-score',
+                       '4-rank 4-name 4-score',
+                       '5-rank 5-name 5-score',
+                       '6-rank 6-name 6-score',
+                       '7-rank 7-name 7-score';
+}
+
+.table-header {
+  font-family:'Courier New', Courier, monospace;
+  background-color:#FFE8FE;
 }
 
 #footer-div {
