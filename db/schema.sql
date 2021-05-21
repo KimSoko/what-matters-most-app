@@ -26,3 +26,10 @@ CREATE TABLE results (
 
 INSERT INTO results (id, topic, 1_name, 1_score, 2_name, 2_score, 3_name, 3_score) VALUES
  (1, 'choosing a job', 'salary', 2, 'company values', 3, 'day to day work', 1);
+
+ LOAD DATA LOCAL INFILE '/home/ubuntu/what-matters-most-app/most.csv'
+ INTO TABLE results
+ FIELDS TERMINATED BY ','
+ ENCLOSED BY '"'
+ LINES TERMINATED BY '\n'
+ IGNORE 1 ROWS;
