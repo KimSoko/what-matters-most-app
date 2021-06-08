@@ -31,7 +31,12 @@ By comparing each option to each other, users are forced to prioritize what matt
 
 
 HOW TO GET STARTED
-The app is free to the public at: http://3.137.148.19/
+* Fork and save this repo
+* npm install to add all dependecies
+* npm run start-react to build your bundle.js
+* npm run start to launch the server
+* navigate to localhost:3002 in your Chrome browser
+* Enjoy!
 
 "I wasn't sure what job to take. The one with the high salary but the monotonous day to day work. Or the one with the flexible schedule and more interesting work, but less opportunity to growth. Thanks to this app, now I know. And I LOVE my new job!" - Satisfied Customer (2021)
 
