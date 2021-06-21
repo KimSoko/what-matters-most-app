@@ -65,31 +65,31 @@ const Index = () => {
     let data = helpers.formatForDB(criteria);
     data.topic = topic;
     axios.post('/data', data)
-    .then((response) => {
-      console.log('POST to db successful ', response);
-    })
-    .catch((err) => {
-      throw err;
-    })
+      .then((response) => {
+        console.log('POST to db successful ', response);
+      })
+      .catch((err) => {
+        throw err;
+      })
   }
 
   return (
     <div id="index-div">
       {display === 'start' && (
         <Start handleCriteria={handleCriteria}
-               handleSubmit={handleSubmit}
-               handleTopic={handleTopic}
+          handleSubmit={handleSubmit}
+          handleTopic={handleTopic}
         />
       )}
       {display === 'decide' && (
         <Decide handleVote={handleVote}
-                list={list}
+          list={list}
         />
       )}
       {display === 'results' && (
         <Results criteria={criteria}
-                 topic={topic}
-                 handlePost={handlePost}/>
+          topic={topic}
+          handlePost={handlePost} />
       )}
     </div>
   )
@@ -99,3 +99,4 @@ ReactDOM.render(
   <Index />,
   document.getElementById('app')
 );
+
